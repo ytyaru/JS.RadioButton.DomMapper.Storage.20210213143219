@@ -3,6 +3,7 @@ export default class Class {
     static async get(className) {
         for (let path of Class.#paths) {
             try {
+                console.log(`${path}${className}.js`);
                 const module = await import(`${path}${className}.js`);
                 if (module) { return module.default; }
             } catch (e) {}

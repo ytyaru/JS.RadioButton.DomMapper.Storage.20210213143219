@@ -1,3 +1,4 @@
+import Store from './Store.js';
 export default class InputCheckboxStore extends Store {
     constructor() { super('input'); }
     getElements() { return document.querySelectorAll(`input[type="checkbox"]`); }

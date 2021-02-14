@@ -1,4 +1,4 @@
-import StoreFactory from './StoreFactory.js';
+import StoreFactory from './store/StoreFactory.js';
 export default class Storage { // 抽象クラスにしたい
     constructor() { }
     // protected にしたい: load, save, getRadios

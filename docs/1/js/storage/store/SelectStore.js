@@ -1,3 +1,4 @@
+import Store from './Store.js';
 export default class SelectStore extends Store {
     constructor() { super('select'); }
     getValue(element) {
