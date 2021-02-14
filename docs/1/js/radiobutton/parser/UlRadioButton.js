@@ -3,9 +3,9 @@
 //import Label from './tag/Label.js';
 import Option from './Option.js';
 export default class UlRadioButton {
-    static create(radio) {
+    static async create(radio) {
         const ul = UlRadioButton.#createUl(radio);
-        UlRadioButton.#createOptions(radio, ul);
+        await UlRadioButton.#createOptions(radio, ul);
         radio.parentNode.insertBefore(ul, radio);
         radio.remove();
     }
@@ -15,8 +15,8 @@ export default class UlRadioButton {
         ul.setAttribute('class', class_value);
         return ul;
     }
-    static #createOptions(radio, ul) {
-        const inputLabels = Option.create(radio); 
+    static async #createOptions(radio, ul) {
+        const inputLabels = await Option.create(radio); 
         for (let inputLabel of inputLabels) {
             const li = document.createElement('li');
             for (let element of inputLabel) {

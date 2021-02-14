@@ -5,9 +5,9 @@
 import Option from './Option.js';
 import Fieldset from './tag/Fieldset.js';
 export default class FieldsetRadioButton {
-    static create(radio) {
+    static async create(radio) {
         const fieldset = Fieldset.create(radio);
-        const inputLabels = Option.create(radio); 
+        const inputLabels = await Option.create(radio); 
         for (let inputLabel of inputLabels) {
             for (let element of inputLabel) {
                 fieldset.appendChild(element);

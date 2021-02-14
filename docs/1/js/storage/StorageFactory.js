@@ -1,3 +1,4 @@
+import Class from '../common/Class.js';
 export default class StorageFactory {
     static IDs = ['Once', 'Every'];
     static getIds() { return StorageFactory.IDs; }
